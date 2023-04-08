@@ -18,4 +18,16 @@ public class UserServiceImpl implements UserService {
     public void InsertOne(User user) {
         dao.InsertOne(user);
     }
+
+    @Override
+    public void deleteOne(String id) {
+        dao.deleteOne(id);
+    }
+
+    @Override
+    public void updateOne(User user) {
+        dao.updateOne(user);
+    }
+
+
 }

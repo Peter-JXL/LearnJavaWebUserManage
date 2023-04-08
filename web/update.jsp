@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- 网页使用的语言 -->
 <html lang="zh-CN">
     <head>
-    	<base href="<%=basePath%>"/>
         <!-- 指定字符集 -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,10 +16,16 @@
     <body>
         <div class="container" style="width: 400px;">
         <h3 style="text-align: center;">修改联系人</h3>
-        <form action="" method="post">
+        <form action="${pageContext.request.contextPath}/userUpdateServlet" method="post">
+
+           <div class="form-group">
+            <label for="name">ID：</label>
+            <input type="text" class="form-control" id="id" name="id"   placeholder="请输入ID" />
+           </div>
+
           <div class="form-group">
             <label for="name">姓名：</label>
-            <input type="text" class="form-control" id="name" name="name"  readonly="readonly" placeholder="请输入姓名" />
+            <input type="text" class="form-control" id="name" name="name" placeholder="请输入姓名" />
           </div>
 
           <div class="form-group">

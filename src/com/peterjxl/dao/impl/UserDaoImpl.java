@@ -22,5 +22,19 @@ public class UserDaoImpl implements UserDao {
         String sql = "insert into users (name, gender, age, address, qq, email) values (?, ?,  ?,  ?,  ?,  ?)";
         template.update(sql, user.getName(), user.getGender(), user.getAge(), user.getAddress(), user.getQq(), user.getEmail());
     }
+
+    @Override
+    public void deleteOne(String id) {
+        String sql = "delete from users where id = ?";
+        template.update(sql, id);
+    }
+
+    @Override
+    public void updateOne(User user) {
+        String sql = "update users set name = ?, gender = ?, age = ?, address = ?, qq = ?, email = ? where id = ?";
+        template.update(sql, user.getName(), user.getGender(), user.getAge(), user.getAddress(), user.getQq(), user.getEmail(), user.getId());
+    }
+
+
 }
 

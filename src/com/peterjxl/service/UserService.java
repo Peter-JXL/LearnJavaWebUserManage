@@ -17,4 +17,8 @@ public interface UserService {
     List<User> findAll();
 
     void InsertOne(User user);
+
+    void deleteOne(String id);
+
+    void updateOne(User user);
 }
