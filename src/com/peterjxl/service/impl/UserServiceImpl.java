@@ -13,4 +13,9 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return dao.findAll();
     }
+
+    @Override
+    public void InsertOne(User user) {
+        dao.InsertOne(user);
+    }
 }

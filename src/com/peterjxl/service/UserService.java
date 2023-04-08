@@ -15,4 +15,6 @@ public interface UserService {
      * @return
      */
     List<User> findAll();
+
+    void InsertOne(User user);
 }

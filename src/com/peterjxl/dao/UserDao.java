@@ -11,4 +11,6 @@ public interface UserDao {
      * @return
      */
     List<User> findAll();
+
+    void InsertOne(User user);
 }
